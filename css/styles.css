@@ -1,0 +1,273 @@
+
+
+   header {
+    background: #575656;
+    color: white;
+    
+  }
+  
+  .header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    justify-items: end;
+  }
+  
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+
+ 
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+  }
+  
+ 
+  .slider{
+    margin: 0 auto;
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .slides{
+    width: 400%;
+    height: 600px;
+    display: flex;
+  }
+
+  .slides input{
+    display: none;
+  }
+
+  .slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 1200px;
+  }
+
+  .manual-navigation{
+    position: absolute;
+    width: 1200px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover{
+    background-color: #fff;
+  }
+
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+
+  #radio4:checked ~ .first{
+    margin-left: -75%;
+  }
+
+  .navigation-auto div{
+    border: 2px solid #007BFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .navigation-auto{
+    position: absolute;
+    width: 1200px;
+    margin-top: 560px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+  }
+
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+  }
+
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+  }
+
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+  }
+
+
+  .content {
+    padding: 20px 0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .card .btn {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .card .btn:hover {
+    background: #0056b3;
+  }
+  
+
+  footer {
+    background-color: #575656;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+.instagram-logo {
+    height: 25px;
+}
+  
+
+  @media (max-width: 768px) {
+    .menu ul {
+      display: none;
+      flex-direction: column;
+    }
+  
+    .menu ul.active {
+      display: flex;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; 
+  }
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-empregos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card {
+    min-width: 300px;
+    margin: 0 10px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
